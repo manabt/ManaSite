@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel='stylesheet' href='./normalize.css' type='text/css' media='screen'>
+    <script src="./product.js"></script>
+    <title>Mana Babatabarsorkhi</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header">Product</h1>
+        </header>
+        <nav>
+            <ul>
+               <li> <a href="./honesty.html"> Honesty </a> </li>
+               <li> <a href="./product.html"> Product </a> </li>
+               <li> <a href="./reflection.html"> Reflection </a> </li>
+           </ul>
+         </nav>
+        <section class="main">
+            <h2 class="mainHeader">Product</h2>
+            <form id='form' name='signup'
+				method='post' 
+				action="https://httpbin.org/post"">
+                <div>
+                    <label for="prdID">Product ID</label>
+                    <input type="text" id="prdID" pattern="[0-9]{8}" title="Digit only and 8 Characters long" required>
+                </div>
+                <div>
+                    <label for="prdDesc">Product Description</label>
+                    <!-- <textarea id="textarea" cols="70" rows="1" pattern="^[A-Z][A-Za-z]{19}[A-Za-z]*$" required></textarea> -->
+                    <input type="text" id="prdDesc" pattern="^[A-Z][A-Za-z]{19}[A-Za-z]*$" required>
+                </div>
+                <div>
+                    <label for="price">Price</label>
+                    <input type="number" id="price" pattern="[0-9]" min=0 max="1000" title="Enter a digit less than 1000" required/>
+                </div> 
+                <div>
+                    <label for="username">Supplier Username</label>
+                    <input type="text" id="username" required/>
+                </div>
+                <div class="check">
+                    <label for="status">Supplier Status</label><br>
+                    <input type="checkbox" name="status" value="New Supplier" onclick="onlyOne(this)"><span>New Supplier</span><br>
+                    <input type="checkbox" name="status" value="Contract Signed" onclick="onlyOne(this)"><span>Contract Signed</span><br>
+                    <input type="checkbox" name="status" value="Quality Tested" onclick="onlyOne(this)"><span>Quality Tested</span><br>
+                </div>
+                <div>
+                    <label for="mail">Supplier Email</label>
+                    <input type="email" id="mail" required/>
+                </div>
+                <div>
+                    <input type="hidden" name="lastName" id="lastName" value="Babatabarsorkhi" />
+                    <input type="hidden" name="studentId" id="studentId" value="117498212" />
+                </div>
+                <div class="button">
+                    <!-- <button type="submit" value="submit" onclick="validate();">Send your message</button> -->
+                    <button type="submit" value="Submit" >Submit</button>
+                </div>
+            </form>
+        </section>
+        <footer>
+            <h2>@2022 <span>Mana Babatabarsorkhi</span></h2>
+        </footer>
+    </div>
+</body>
+
+</html>
